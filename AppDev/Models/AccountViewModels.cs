@@ -79,19 +79,10 @@ namespace AppDev.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string DateofBirth { get; set; }
-        public string Education { get; set; }
-        public string MainProgrammingLang { get; set; }
-        public float ToeicScore { get; set; }
-        public string Exp_Detail { get; set; }
-        public string Department { get; set; }
-        public string Location { get; set; }
-        public string WorkPlace { get; set; }
-        public string Telephone { get; set; }
-        public string Type { get; set; }
+        public Trainee Trainee { get; set; }
+        public Trainer Trainer { get; set; }
+        public string RoleName { get; set; }
+        public List<string> Roles { get; set; }
     }
 
     public class ResetPasswordViewModel

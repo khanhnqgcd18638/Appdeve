@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-@if (User.Identity.IsAuthenticated)
+@if (!User.Identity.IsAuthenticated)
 {
     <h1>Welcome</h1>
 }
@@ -11,7 +11,7 @@
 }
 @if (User.IsInRole("staff"))
 {
-    <h1>Welcome Admin</h1>
+    <h1>Welcome</h1>
 }
 @if (User.IsInRole("trainer"))
 {
