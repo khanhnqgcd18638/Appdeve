@@ -1,0 +1,46 @@
+﻿@model List<AppDev.Models.ApplicationUser>
+@{
+    ViewBag.Title = "TraineeManagement";
+}
+
+<h2>TraineeManagement</h2>
+@using (Html.BeginForm("TraineeManagement", "Staff", "POST"))
+{
+    <div class="form-group">
+        @Html.Label("Search")
+        @Html.TextBox("searchString", null, new { @class = "form-control" })
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+}
+@Html.ActionLink("Create a new account", "Register", "Account", null, new { @class = "btn btn-default" })
+<table style="width:100%;border:2px solid black">
+    <tr style="border: 2px solid black">
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    @{ int i = 0;
+        foreach (var k1 in Model)
+        {
+            i++;
+            <tr style="border: 2px solid black">
+                <td style="border: 2px solid black;text-align:center">@i</td>
+                <td style="border: 2px solid black;text-align:center">@k1.UserName</td>
+                <td style="border: 2px solid black;text-align: center">@k1.Email</td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteTrainee", "Staff",
+                                new { id= k1.Id },
+                                new { @class = "btn btn-default" })
+                    @Html.ActionLink("Update", "UpdateTrainee", "Staff",
+                                new { id = k1.Id },
+                                new { @class = "btn btn-default" })
+                    @Html.ActionLink("Detail", "DetailsTrainee", "Staff",
+                                new { id = k1.Id },
+                                new { @class = "btn btn-default" })
+                </td>
+            </tr>
+
+        }
+    }
+</table>

@@ -1,0 +1,36 @@
+﻿@model List<AppDev.Models.ApplicationUser>
+@{
+    ViewBag.Title = "TrainerProfile";
+}
+
+<h2>TrainerProfile</h2>
+<table style="width:100%;border:2px solid black">
+    <tr style="border: 2px solid black">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    @{ int i = 0;
+
+        foreach (var k1 in Model)
+        {
+            i++;
+            <tr style="border: 2px solid black">
+                <td style="border: 2px solid black;text-align:center">@i</td>
+                <td style="border: 2px solid black;text-align:center">@k1.UserName</td>
+                <td style="border: 2px solid black;text-align: center">@k1.Email</td>
+                <td>
+                    @Html.ActionLink("Update", "UpdateTrainer", "Staff",
+                                new { id = k1.Id },
+                                new { @class = "btn btn-default" })
+                    @Html.ActionLink("Detail", "DetailsTrainer", "Staff",
+                                new { id = k1.Id },
+                                new { @class = "btn btn-default" })
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+

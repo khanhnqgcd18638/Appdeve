@@ -5,8 +5,7 @@ using System.Web;
 
 namespace AppDev.Models
 {
-    public class Staff
+    public class Staff:ApplicationUser
     {
-       
     }
 }

@@ -256,10 +256,16 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\StaffView.cshtml" />
     <Content Include="Views\Admin\TrainerView.cshtml" />
+    <Content Include="Views\Staff\TraineeManagement.cshtml" />
+    <Content Include="Views\Staff\UpdateTrainee.cshtml" />
+    <Content Include="Views\Staff\DetailsTrainee.cshtml" />
+    <Content Include="Views\Staff\TrainerProfile.cshtml" />
+    <Content Include="Views\Staff\DetailsTrainer.cshtml" />
+    <Content Include="Views\Staff\UpdateTrainer.cshtml" />
+    <Content Include="Views\Staff\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Staff\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

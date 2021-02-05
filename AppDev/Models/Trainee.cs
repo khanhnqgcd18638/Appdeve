@@ -7,6 +7,7 @@ namespace AppDev.Models
 {
     public class Trainee: ApplicationUser
     {
+        
         public int Age { get; set; }
         public string DateofBirth { get; set; }
         public string Education { get; set; }
