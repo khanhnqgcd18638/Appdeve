@@ -175,20 +175,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102041145408_model1.cs" />
-    <Compile Include="Migrations\202102041145408_model1.Designer.cs">
-      <DependentUpon>202102041145408_model1.cs</DependentUpon>
+    <Compile Include="Migrations\202102061527460_UpdateWholeDB.cs" />
+    <Compile Include="Migrations\202102061527460_UpdateWholeDB.Designer.cs">
+      <DependentUpon>202102061527460_UpdateWholeDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102041559326_create.cs" />
-    <Compile Include="Migrations\202102041559326_create.Designer.cs">
-      <DependentUpon>202102041559326_create.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102041746532_change.cs" />
-    <Compile Include="Migrations\202102041746532_change.Designer.cs">
-      <DependentUpon>202102041746532_change.cs</DependentUpon>
+    <Compile Include="Migrations\202102071336405_asd.cs" />
+    <Compile Include="Migrations\202102071336405_asd.Designer.cs">
+      <DependentUpon>202102071336405_asd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\CourseCategoryViewModel.cs" />
+    <Compile Include="Models\CourseViewModel.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Trainee.cs" />
     <Compile Include="Models\Trainer.cs" />
@@ -263,6 +263,10 @@
     <Content Include="Views\Staff\DetailsTrainer.cshtml" />
     <Content Include="Views\Staff\UpdateTrainer.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
+    <Content Include="Views\Staff\CourseManagement.cshtml" />
+    <Content Include="Views\Staff\CategoryView.cshtml" />
+    <Content Include="Views\Staff\CreateCategory.cshtml" />
+    <Content Include="Views\Staff\CreateCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,14 +285,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202102041145408_model1.resx">
-      <DependentUpon>202102041145408_model1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102061527460_UpdateWholeDB.resx">
+      <DependentUpon>202102061527460_UpdateWholeDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102041559326_create.resx">
-      <DependentUpon>202102041559326_create.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102041746532_change.resx">
-      <DependentUpon>202102041746532_change.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102071336405_asd.resx">
+      <DependentUpon>202102071336405_asd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

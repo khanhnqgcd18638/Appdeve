@@ -7,13 +7,13 @@ namespace AppDev.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class create : IMigrationMetadata
+    public sealed partial class UpdateWholeDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(create));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateWholeDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "202102041559326_create"; }
+            get { return "202102061527460_UpdateWholeDB"; }
         }
         
         string IMigrationMetadata.Source

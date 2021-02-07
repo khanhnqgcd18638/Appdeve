@@ -126,6 +126,55 @@ namespace AppDev.Controllers
             _context.SaveChanges();
             return RedirectToAction("TrainerProfile");
         }
+        public ActionResult CourseManagement()
+        {
+            var courses = _context.Courses.ToList();
+            var category = _context.Categories;
+            
+            return View(courses);
+        }
+        public ActionResult CategoryView()
+        {
+            return View(_context.Categories.ToList());
+        }
+        public ActionResult CreateCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateCategory(Category category)
+        {
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+            return RedirectToAction("CategoryView");
+        }
+        public ActionResult DeleteCategory(int id)
+        {
+            var removeCategory = _context.Categories.SingleOrDefault(t => t.Id == id);
+            _context.Categories.Remove(removeCategory);
+            _context.SaveChanges();
+            return RedirectToAction("CategoryView");
+        }
+        public ActionResult CreateCourse()
+        {
+            var courseCategory = new CourseCategoryViewModel()
+            {
+                Categories = _context.Categories.ToList(),
+            };
+            return View(courseCategory);
+        }
+        [HttpPost]
+        public ActionResult CreateCourse(CourseCategoryViewModel courseCategoryViewModel)
+        {
+            var new_course = new Course()
+            {
+                Name = courseCategoryViewModel.Course.Name,
+                Category_Id = courseCategoryViewModel.CategoryId
+            };
+            _context.Courses.Add(new_course);
+            _context.SaveChanges();
+            return RedirectToAction("CourseManagement");
+        }
 
     }
 }

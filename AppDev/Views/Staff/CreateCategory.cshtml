@@ -1,0 +1,20 @@
+﻿@model AppDev.Models.Category
+@{
+    ViewBag.Title = "CreateCategory";
+}
+
+<h2>CreateCategory</h2>
+@Html.ActionLink("Back", "CategoryView", null, new { @class = "btn btn-default" })
+<br />
+@using (Html.BeginForm("CreateCategory", "Staff","POST"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "text-default" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-default" })
+    </div>
+    <br />
+    <div class="form-group">
+        <button type="submit">Create</button>
+    </div>
+}
+
