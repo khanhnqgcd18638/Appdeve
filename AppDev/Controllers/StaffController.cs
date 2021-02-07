@@ -129,8 +129,6 @@ namespace AppDev.Controllers
         public ActionResult CourseManagement()
         {
             var courses = _context.Courses.ToList();
-            var category = _context.Categories;
-            
             return View(courses);
         }
         public ActionResult CategoryView()
@@ -172,6 +170,13 @@ namespace AppDev.Controllers
                 Category_Id = courseCategoryViewModel.CategoryId
             };
             _context.Courses.Add(new_course);
+            _context.SaveChanges();
+            return RedirectToAction("CourseManagement");
+        }
+        public ActionResult DeleteCourse(int id)
+        {
+            var removeCourse = _context.Courses.SingleOrDefault(t => t.Id == id);
+            _context.Courses.Remove(removeCourse);
             _context.SaveChanges();
             return RedirectToAction("CourseManagement");
         }
